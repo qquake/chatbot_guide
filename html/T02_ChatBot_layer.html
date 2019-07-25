@@ -98,11 +98,10 @@
                 $('#chatbotWrapper').css('display', 'inline-block');
                 $('.dimmedBg').css('display', 'block');
             });
-            $('#chatbotWrapper').contents().find('.btn_close').click(function(e) {
-                console.log(1);
+            window.closeChatbot = function() {
                 $('#chatbotWrapper').css('display', 'none');
                 $('.dimmedBg').css('display', 'none');
-            });
+            };
         });
     </script>
     <!-- // copy this -->

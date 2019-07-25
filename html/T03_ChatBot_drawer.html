@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Layer type</title>
+    <title>Drawer type</title>
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/BX_style.css" />
     <!-- copy this -->
@@ -98,10 +98,10 @@
                 $('#chatbotWrapper').css('display', 'inline-block');
                 $('.dimmedBg').css('display', 'block');
             });
-            $('#chatbotWrapper').contents().find('.btn_close').click(function(e) {
+            window.closeChatbot = function() {
                 $('#chatbotWrapper').css('display', 'none');
                 $('.dimmedBg').css('display', 'none');
-            });
+            };
         });
     </script>
     <!-- // copy this -->
