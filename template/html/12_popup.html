@@ -125,35 +125,19 @@
             // popup (full screen)
             $('#btnPopupFull').click(function() {
                 $('#popup_full').css('display', 'block');
-                $('body').css({
-                    overflow: 'hidden'
-                }).bind('touchmove', function(e) {
-                    e.preventDefault()
-                });
             });
 
             // popup (small)
             $('#btnPopupSmall').click(function() {
                 $('#popup_small').css('display', 'block');
-                $('body').css({
-                    overflow: 'hidden'
-                }).bind('touchmove', function(e) {
-                    e.preventDefault()
-                });
             });
 
             // popup close
             $('.popup .btn_highlight').click(function() {
                 $(this).parents('.popup').css('display', 'none');
-                $('body').css({
-                    overflow: 'auto'
-                }).unbind('touchmove');
             });
             $('.popup .btn_default').click(function() {
                 $(this).parents('.popup').css('display', 'none');
-                $('body').css({
-                    overflow: 'auto'
-                }).unbind('touchmove');
             });
         });
     </script>

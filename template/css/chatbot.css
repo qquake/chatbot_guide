@@ -48,7 +48,7 @@ input,
 select,
 button,
 textarea {
-    font-family: 'Malgun Gothic', Arial, sans-serif;
+    font-family: "Malgun Gothic", Arial, sans-serif;
     vertical-align: middle;
     font-weight: normal;
     outline: 0;
@@ -61,8 +61,9 @@ html {
 
 body {
     height: 100%;
+    overflow: hidden;
     color: #444;
-    font-family: 'Malgun Gothic', Arial, sans-serif;
+    font-family: "Malgun Gothic", Arial, sans-serif;
     font-weight: normal;
     line-height: 1.2em;
 }
@@ -122,10 +123,11 @@ body {
 }
 
 #wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #wrap.pc {
@@ -151,15 +153,32 @@ body {
     flex: 0 0 auto;
 }
 
+.mobile #content_wrapper:before,
+.mobile #content_wrapper:after {
+    display: none;
+}
+
 #content_wrapper:after {
     height: 49px;
 }
 
+.mobile #content_wrapper {
+    padding: 56px 0 0 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 .content_view {
-    padding-bottom: 60px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     flex: 1 1 auto;
+}
+
+.mobile .content_view {
+    position: relative;
+    padding-bottom: 50px;
+    overflow-y: visible;
 }
 
 .btn_icon span {
@@ -403,6 +422,10 @@ footer .card {
 .message_view {
     position: relative;
     padding: 0;
+}
+
+.message_view:last-child {
+    margin-bottom: 64px;
 }
 
 .message_view li {
@@ -1201,19 +1224,23 @@ table.ui-datepicker-calendar td a:focus:after {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1000;
 }
 
 .popup_wrapper {
     display: flex;
-    height: 100vh;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .popup_sm {
@@ -1275,7 +1302,7 @@ table.ui-datepicker-calendar td a:focus:after {
 
 .popup_full .popup_body {
     text-align: left;
-    overflow-y: auto !important;
+    overflow-y: auto;
 }
 
 .popup_full .popup_body p {

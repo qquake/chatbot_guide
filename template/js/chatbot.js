@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
     // check pc/mobile
-    var filter = "win16|win32|win64|mac|macintel";
+    var filter = 'win16|win32|win64|mac|macintel';
 
     if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
         $('#wrap').addClass('mobile');
@@ -63,20 +63,20 @@ $(document).ready(function() {
     });
 
     // popup close
-    $(".popup .btn_back").click(function() {
+    $('.popup .btn_back').click(function() {
         $(this).parents('.popup').css('display', 'none');
-        $("body").css({
-            overflow: 'auto'
-        }).unbind('touchmove');
+        // $('body').css({
+        //     overflow: 'auto'
+        // }).unbind('touchmove');
     });
 });
 
 // toggle mode between chatbot/customer service
-$(".btn_customerService").click(function() {
+$('.btn_customerService').click(function() {
     $('.header_chatbot').addClass('mode_customerService');
     $('.header_chatbot h1').text('UX 상담원');
 });
-$(".btn_chatbot").click(function() {
+$('.btn_chatbot').click(function() {
     $('.header_chatbot').removeClass('mode_customerService');
     $('.header_chatbot h1').text('UX봇');
 });
@@ -91,27 +91,27 @@ $('.footer_frame input').on('input', function(e) {
 });
 
 // clear footer input text
-$(".footer_frame .btn_clear").click(function() {
+$('.footer_frame .btn_clear').click(function() {
     $('.footer_frame input').val('');
     $('.footer_frame').removeClass('on');
 });
 
 // rate - emoticon toggle select
-$(".rate_emoticon .btn_icon").click(function() {
-    $(".rate_emoticon .btn_icon").removeClass('on');
+$('.rate_emoticon .btn_icon').click(function() {
+    $('.rate_emoticon .btn_icon').removeClass('on');
     $(this).addClass('on');
 });
 
 // rate - star select
-$(".rate_star .btn_icon").click(function() {
-    $(".rate_star .btn_icon").removeClass('on');
+$('.rate_star .btn_icon').click(function() {
+    $('.rate_star .btn_icon').removeClass('on');
     $(this).prevAll().addClass('on');
     $(this).addClass('on');
 });
 
 // initialize datepicker
 $(function() {
-    $("#datepicker").datepicker({
+    $('#datepicker').datepicker({
         showMonthAfterYear: true,
         monthNames: ['01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월'],
         dayNamesMin: ['일', '월', '화', '수', '목', '금', '토']
