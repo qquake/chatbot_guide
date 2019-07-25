@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Button</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/BX_style.css" />
+    <!-- copy this -->
+    <style>
+        .widgetWrapper {
+            display: flex;
+            flex-flow: row;
+        }
+        
+        .widgetWrapper .widget {
+            flex: 1 1 auto;
+        }
+        
+        .widgetWrapper .widget.chatbotWrapper {
+            flex: 0 0 auto;
+            width: 500px
+        }
+        
+        #frameWrapper {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid #adadad;
+        }
+    </style>
+    <!-- // copy this -->
+</head>
+
+<body>
+    <article class="widget">
+        <div class="widget-title">
+            <h2>Button</h2>
+        </div>
+    </article>
+
+    <article class="widget" style="margin-top: 50px;">
+        <div class="widgetWrapper">
+            <article class="widget chatbotWrapper">
+                <iframe id="frameWrapper" name="chatbotWrapper" src="../template/html/03_button.html" frameborder="0" style="display: block"></iframe>
+            </article>
+            <article class="widget">
+                <div class="widget-content">
+                    <dl class="alert check-info">
+                        <dd>① 버튼은 단독으로 사용 불가. 다른 UI 요소와 조합된 형태로만 가능</dd>
+                        <dd>② 버튼은 텍스트버튼/링크버튼/전화버튼이 있음</dd>
+                        <dd>③ 텍스트버튼은 1번만 누를 수 있으며, 대화가 지나가면 Disable 됨</dd>
+                        <dd>④ 버튼 최대 개수 3개 권장</dd>
+                        <dd>⑤ 버튼이 2개일 경우 나란히 배치할 수 있음</dd>
+                        <dd>⑥ 중요도가 가장 높은 버튼 1개는 다른 bg를 적용할 수 있음</dd>
+                    </dl>
+                </div>
+            </article>
+        </div>
+    </article>
+
+
+    <script type="text/javascript" src="../addon/jquery/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../addon/jquery/js/jquery.accordion.js"></script>
+    <script type="text/javascript" src="../js/BX_js_common.js"></script>
+
+    <!-- copy this -->
+    <script type="text/javascript">
+    </script>
+    <!-- // copy this -->
+</body>
+
+</html>

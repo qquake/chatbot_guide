@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no" />
+    <!-- mobile : full screen  -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- mobile safari : remove status bar  -->
+    <meta name="mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <!-- CSS (library) -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../library/swiper/swiper.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/chatbot.css" />
+
+    <title>Chatbot template</title>
+</head>
+
+<body>
+    <div id="wrap" class="">
+        <header>
+            <!-- chatbot -->
+            <div class="header_chatbot">
+                <h1>UX봇</h1>
+                <button class="btn_icon btn_help"><span>help</span></button>
+                <button class="btn_icon btn_customerService"><span>customer service</span></button>
+                <button class="btn_icon btn_chatbot"><span>chatbot</span></button>
+                <button class="btn_icon btn_close"><span>close</span></button>
+            </div>
+        </header>
+
+        <div id="content_wrapper">
+            <div class="content_view">
+                <!-- chatbot mode -->
+                <div class=" message_view chatbot">
+                    <ul>
+                        <!-- rate (emoticon) -->
+                        <li>
+                            <div class="messageLeft">
+                                <span class="character"></span>
+                                <div class="messageLeft_con">
+                                    <div class="chat_name">UX봇</div>
+                                    <div class="messageLeft_box">
+                                        <div class="card">
+                                            <div class="message_content">
+                                                <p>저와의 대화는 어떠셨나요?</p>
+                                                <div class="rate_emoticon">
+                                                    <button class="btn_icon emo01"><span>awful</span></button>
+                                                    <button class="btn_icon emo02"><span>bad</span></button>
+                                                    <button class="btn_icon emo03"><span>so so</span></button>
+                                                    <button class="btn_icon emo04"><span>good</span></button>
+                                                    <button class="btn_icon emo05 on"><span>wonderful</span></button>
+                                                </div>
+                                                <textarea placeholder="의견을 적어주세요."></textarea>
+                                                <div class="btn_block_inline">
+                                                    <button class="btn">취소</button>
+                                                    <button class="btn btn_highlight">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="messageLeft_time">오전 11:38</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- rate (star) -->
+                        <li>
+                            <div class="messageLeft">
+                                <span class="character"></span>
+                                <div class="messageLeft_con">
+                                    <div class="chat_name">UX봇</div>
+                                    <div class="messageLeft_box">
+                                        <div class="card">
+                                            <div class="message_content">
+                                                <p>저와의 대화는 어떠셨나요?</p>
+                                                <div class="rate_star">
+                                                    <button class="btn_icon on"><span>1</span></button>
+                                                    <button class="btn_icon on"><span>2</span></button>
+                                                    <button class="btn_icon on"><span>3</span></button>
+                                                    <button class="btn_icon on"><span>4</span></button>
+                                                    <button class="btn_icon on"><span>5</span></button>
+                                                </div>
+                                                <textarea placeholder="의견을 적어주세요."></textarea>
+                                                <div class="btn_block_inline">
+                                                    <button class="btn">취소</button>
+                                                    <button class="btn btn_highlight">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="messageLeft_time">오전 11:38</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_frame">
+                <input type="text" placeholder="텍스트를 입력하세요">
+                <button class="btn_clear"><span>초기화</span></button>
+                <button class="btn_send">전송</button>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- javascript (library) -->
+    <script type="text/javascript" src="../library/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../library/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../library/swiper/swiper.min.js"></script>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="../js/chatbot.js"></script>
+
+    <!-- custom javascript -->
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

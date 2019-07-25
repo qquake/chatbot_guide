@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loading</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/BX_style.css" />
+    <!-- copy this -->
+    <style>
+        .widgetWrapper {
+            display: flex;
+            flex-flow: row;
+        }
+        
+        .widgetWrapper .widget {
+            flex: 1 1 auto;
+        }
+        
+        .widgetWrapper .widget.chatbotWrapper {
+            flex: 0 0 auto;
+            width: 500px
+        }
+        
+        #frameWrapper {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid #adadad;
+        }
+    </style>
+    <!-- // copy this -->
+</head>
+
+<body>
+    <article class="widget">
+        <div class="widget-title">
+            <h2>Loading</h2>
+        </div>
+    </article>
+
+    <article class="widget" style="margin-top: 50px;">
+        <div class="widgetWrapper">
+            <article class="widget chatbotWrapper">
+                <iframe id="frameWrapper" name="chatbotWrapper" src="../template/html/11_loading.html" frameborder="0" style="display: block"></iframe>
+            </article>
+            <article class="widget">
+                <div class="widget-content">
+                    <dl class="alert check-info">
+                        <dd>① 응답을 출력하기 전까지 loading animation이 나타남</dd>
+                    </dl>
+                </div>
+            </article>
+        </div>
+    </article>
+
+
+    <script type="text/javascript" src="../addon/jquery/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../addon/jquery/js/jquery.accordion.js"></script>
+    <script type="text/javascript" src="../js/BX_js_common.js"></script>
+
+    <!-- copy this -->
+    <script type="text/javascript">
+    </script>
+    <!-- // copy this -->
+</body>
+
+</html>

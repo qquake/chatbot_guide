@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Layer type</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/BX_style.css" />
+    <!-- copy this -->
+    <style>
+        #chatbotBtn {
+            position: fixed;
+            bottom: 60px;
+            right: 40px;
+            display: inline-block;
+            width: 60px;
+            transition: bottom 1s;
+        }
+        
+        #chatbotBtn:hover {
+            bottom: 70px;
+        }
+        
+        #chatbotBtn:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 14px;
+            display: inline-block;
+            width: 36px;
+            height: 0;
+            box-shadow: 0px 0px 8px 1px #111;
+            transition: bottom 1s, left 1s, width 1s, box-shadow 1s;
+        }
+        
+        #chatbotBtn:hover:after {
+            bottom: -20px;
+            width: 28px;
+            left: 18px;
+            box-shadow: 0px 0px 12px 1px #111;
+        }
+        
+        #chatbotBtn img {
+            width: 100%;
+        }
+        
+        #chatbotWrapper {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 400px !important;
+            height: 600px !important;
+            border: 1px solid #ccc;
+            z-index: 10000;
+        }
+        
+        .dimmedBg {
+            background: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            opacity: 0.5;
+            display: none;
+        }
+    </style>
+    <!-- // copy this -->
+</head>
+
+<body>
+    <article class="widget">
+        <div class="widget-title">
+            <h2>Layer Type</h2>
+        </div>
+    </article>
+
+    <!-- copy this -->
+    <div class="dimmedBg"></div>
+    <a href="#" id="chatbotBtn" title="ChatBot">
+        <img src="../images/ico_chatbot.png">
+    </a>
+    <iframe id="chatbotWrapper" name="chatbotWrapper" src="../template/html/00_template.html" frameborder="0" style="display: none"></iframe>
+    <!-- // copy this -->
+
+    <script type="text/javascript" src="../addon/jquery/js/jquery-1.11.2.min.js "></script>
+    <script type="text/javascript" src="../addon/jquery/js/jquery.accordion.js"></script>
+    <script type="text/javascript" src="../js/BX_js_common.js "></script>
+
+    <!-- copy this -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#chatbotBtn').click(function(e) {
+                e.preventDefault();
+                $('#chatbotWrapper').css('display', 'inline-block');
+                $('.dimmedBg').css('display', 'block');
+            });
+            $('#chatbotWrapper').contents().find('.btn_close').click(function(e) {
+                console.log(1);
+                $('#chatbotWrapper').css('display', 'none');
+                $('.dimmedBg').css('display', 'none');
+            });
+        });
+    </script>
+    <!-- // copy this -->
+</body>
+
+</html>
