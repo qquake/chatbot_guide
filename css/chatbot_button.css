@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+
+/*Copyright ©2015 LG CNS, All Rights Reserved.*/
+
+
+/*--------- HTML (common) --------------------*/
+
+html,
+body {
+    height: 100%;
+}
+
+
+/*--------- Chatbot button -------------------*/
+
+#chatbotBtn {
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    display: inline-block;
+    width: 60px;
+    transition: bottom 1s;
+}
+
+#chatbotBtn:hover {
+    bottom: 70px;
+}
+
+#chatbotBtn:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 14px;
+    display: inline-block;
+    width: 36px;
+    height: 0;
+    box-shadow: 0px 0px 8px 1px #111;
+    transition: bottom 1s, left 1s, width 1s, box-shadow 1s;
+}
+
+#chatbotBtn:hover:after {
+    bottom: -20px;
+    width: 28px;
+    left: 18px;
+    box-shadow: 0px 0px 12px 1px #111;
+}
+
+#chatbotBtn img {
+    width: 100%;
+}
+
+#chatbotWrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 400px !important;
+    height: 600px !important;
+    border: 1px solid #ccc;
+    z-index: 10000;
+}
+
+.dimmedBg {
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0.5;
+    display: none;
+}
+
+.chatbot_drawer {
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+
+.chatbot_drawer .main {
+    padding: 20px;
+    flex: 1 1 auto;
+    transition: padding-right 1s;
+}
+
+.chatbot_drawer #chatbotWrapper {
+    flex: 0 0 auto;
+    position: absolute;
+    top: 0;
+    right: -400px;
+    height: 100% !important;
+    border: none;
+    border-left: 1px solid #e5e5e5;
+    transition: right 1s;
+}
+
+.chatbot_drawer.on .main {
+    padding-right: 420px;
+}
+
+.chatbot_drawer.on #chatbotWrapper {
+    right: 0;
+}
+
+.chatbot_drawer #chatbotBtn {
+    position: relative;
+    top: 50px;
+    left: 40px;
+    display: inline-block;
+    width: 60px;
+    transition: top 1s;
+}
+
+.chatbot_drawer #chatbotBtn:hover {
+    top: 40px;
+}

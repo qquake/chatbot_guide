@@ -13,6 +13,7 @@
 }
 
 html {
+    height: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -23,7 +24,6 @@ body.frameBody {
 }
 
 body {
-    padding: 0px;
     margin: 0px;
     height: 100%;
     min-height: 100%;

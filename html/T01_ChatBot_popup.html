@@ -9,76 +9,58 @@
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/BX_style.css" />
 
-    <!-- copy this -->
+    <!-- css for chatbot button -->
+    <link rel="stylesheet" type="text/css" href="../css/chatbot_button.css" />
+
+    <!-- css for positioning chatbot button -->
     <style>
         #chatbotBtn {
-            position: fixed;
             bottom: 60px;
             right: 40px;
-            display: inline-block;
-            width: 60px;
-            transition: bottom 1s;
         }
         
         #chatbotBtn:hover {
             bottom: 70px;
-        }
-        
-        #chatbotBtn:after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 14px;
-            display: inline-block;
-            width: 36px;
-            height: 0;
-            box-shadow: 0px 0px 8px 1px #111;
-            transition: bottom 1s, left 1s, width 1s, box-shadow 1s;
-        }
-        
-        #chatbotBtn:hover:after {
-            bottom: -20px;
-            width: 28px;
-            left: 18px;
-            box-shadow: 0px 0px 12px 1px #111;
-        }
-        
-        #chatbotBtn img {
-            width: 100%;
+            /* chatbotBtn bottom + 10 */
         }
     </style>
-    <!-- // copy this -->
+    <!-- // css for positioning chatbot button -->
 </head>
 
 <body>
     <article class="widget">
         <div class="widget-title">
-            <h2>Popup Type</h2>
+            <h2>팝업형</h2>
+        </div>
+    </article>
+    <article class="widget">
+        <div class="widget-content">
+            <dl class="alert check-info">
+                <dd>부모(Parent) 페이지에서 별도 팝업창으로 띄우는 형태</dd>
+            </dl>
+            <img src="../images/img_chatbot_popup.png" alt="챗봇 배치 유형 (팝업)" style="margin: 60px 0 0 60px">
         </div>
     </article>
 
-    <!-- copy this -->
+    <!-- chatbot button -->
     <a href="#" id="chatbotBtn" title="ChatBot">
         <img src="../images/ico_chatbot.png">
     </a>
-    <!-- // copy this -->
+    <!-- // chatbot button -->
 
     <script type="text/javascript" src="../addon/jquery/js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="../addon/jquery/js/jquery.accordion.js"></script>
-    <script type="text/javascript" src="../js/BX_js_common.js"></script>
 
-    <!-- copy this -->
+    <!-- script for opening chatbot window -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('#chatbotBtn').click(function(e) {
-                e.preventDefault();
                 var url = '../template/html/00_template.html';
                 var newWindow = window.open(url, '_blank', 'top=100, left=100, width=450, height=600, resizable=yes');
                 newWindow.location.href = url;
             });
         });
     </script>
-    <!-- // copy this -->
+    <!-- // script for opening chatbot window -->
 </body>
 
 </html>

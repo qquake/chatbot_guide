@@ -8,103 +8,64 @@
     <title>Drawer type</title>
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/BX_style.css" />
-    <!-- copy this -->
+
+    <!-- css for chatbot button -->
+    <link rel="stylesheet" type="text/css" href="../css/chatbot_button.css" />
+
+    <!-- css for positioning chatbot button -->
     <style>
         #chatbotBtn {
-            position: fixed;
-            bottom: 60px;
-            right: 40px;
-            display: inline-block;
-            width: 60px;
-            transition: bottom 1s;
+            top: 50px;
+            left: 40px;
         }
         
         #chatbotBtn:hover {
-            bottom: 70px;
-        }
-        
-        #chatbotBtn:after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 14px;
-            display: inline-block;
-            width: 36px;
-            height: 0;
-            box-shadow: 0px 0px 8px 1px #111;
-            transition: bottom 1s, left 1s, width 1s, box-shadow 1s;
-        }
-        
-        #chatbotBtn:hover:after {
-            bottom: -20px;
-            width: 28px;
-            left: 18px;
-            box-shadow: 0px 0px 12px 1px #111;
-        }
-        
-        #chatbotBtn img {
-            width: 100%;
-        }
-        
-        #chatbotWrapper {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            width: 400px !important;
-            height: 600px !important;
-            border: 1px solid #ccc;
-            z-index: 10000;
-        }
-        
-        .dimmedBg {
-            background: #000;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10000;
-            opacity: 0.5;
-            display: none;
+            top: 40px;
+            /* chatbotBtn top - 10 */
         }
     </style>
-    <!-- // copy this -->
+    <!-- // css for positioning chatbot button -->
 </head>
 
-<body>
-    <article class="widget">
-        <div class="widget-title">
-            <h2>Drawer Type</h2>
-        </div>
-    </article>
+<!-- sample markup for chatbot drawer type page -->
 
-    <!-- copy this -->
-    <div class="dimmedBg"></div>
-    <a href="#" id="chatbotBtn" title="ChatBot">
-        <img src="../images/ico_chatbot.png">
-    </a>
-    <iframe id="chatbotWrapper" name="chatbotWrapper" src="../template/html/00_template.html" frameborder="0" style="display: none"></iframe>
-    <!-- // copy this -->
+<body class="chatbot_drawer">
+    <div class="main">
+        <article class="widget">
+            <div class="widget-title">
+                <h2>드로어형</h2>
+            </div>
+        </article>
+
+        <article class="widget">
+            <div class="widget-content">
+                <dl class="alert check-info">
+                    <dd>전체 레이아웃에서 챗봇 영역을 확보하고 서랍식으로 접고 펼치는 형태</dd>
+                </dl>
+                <img src="../images/img_chatbot_drawer.png" alt="챗봇 배치 유형 (드로어)" style="margin: 60px 0 0 60px">
+            </div>
+        </article>
+
+        <a href="#" id="chatbotBtn" title="ChatBot">
+            <img src="../images/ico_chatbot.png">
+        </a>
+    </div>
+    <iframe id="chatbotWrapper" name="chatbotWrapper" src="../template/html/00_template.html" frameborder="0"></iframe>
 
     <script type="text/javascript" src="../addon/jquery/js/jquery-1.11.2.min.js "></script>
-    <script type="text/javascript" src="../addon/jquery/js/jquery.accordion.js"></script>
-    <script type="text/javascript" src="../js/BX_js_common.js "></script>
 
-    <!-- copy this -->
+    <!-- script for opening/closing chatbot window -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('#chatbotBtn').click(function(e) {
-                e.preventDefault();
-                $('#chatbotWrapper').css('display', 'inline-block');
-                $('.dimmedBg').css('display', 'block');
+                $('.chatbot_drawer').toggleClass('on');
             });
             window.closeChatbot = function() {
-                $('#chatbotWrapper').css('display', 'none');
-                $('.dimmedBg').css('display', 'none');
+                $('.chatbot_drawer').removeClass('on');
             };
         });
     </script>
-    <!-- // copy this -->
+    <!-- // script for opening/closing chatbot window -->
 </body>
 
 </html>
