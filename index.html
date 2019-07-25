@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LG CNS ChatBot Template</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/BX_style.css" />
+
+    <!-- custom CSS -->
+    <style>
+        .sysLogo {
+            padding: 6px 16px 10px;
+        }
+        
+        .sysLogo a {
+            display: block;
+            position: relative;
+            padding: 0 4px;
+            border-bottom: 3px solid #a50034;
+            line-height: 22px;
+            z-index: 1;
+        }
+        
+        .sysLogo a h1 {
+            position: relative;
+            left: 0;
+            text-align: left;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: -0.1px;
+        }
+    </style>
+</head>
+
+<body class="frameBody">
+    <!-- page-container start -->
+    <div class="page-container">
+        <!-- page-head start -->
+        <header class="page-head">
+            <a class="leftCon" href="#"><img src="images/ico_leftCon.png" alt="Left Navigation Control" /></a>
+            <ul>
+                <li class="localTime"><span id="nowDate"></span><span id="nowTime"></span></li>
+            </ul>
+        </header>
+        <!-- //page-head end -->
+        <!-- page-left start -->
+        <nav class="page-left leftOpen">
+            <div class="sysLogo">
+                <a href="html/001_ChatBot_overview.html" target="iframeSubmaster">
+                    <h1>LG CNS<br>ChatBot Template</h1>
+                </a>
+            </div>
+            <div class="user-info">
+                <ul>
+                    <li class="userPhoto"><img src="images/noPhoto.png" alt="No Photo now" /></li>
+                    <li class="userName">Gildong Hong</li>
+                    <li class="userComp">LG CNS</li>
+                </ul>
+            </div>
+            <div class="page-navigation">
+                <section id="leftNav" data-accordion-group>
+                    <a class="depth1 hasNoChild" data-control href="html/001_ChatBot_overview.html" target="iframeSubmaster">
+                        <div>Overview</div>
+                    </a>
+                    <section data-accordion class="open">
+                        <a class="depth1" data-control>
+                            <div>Type</div>
+                        </a>
+                        <div data-content class="finalDepth">
+                            <article>
+                                <a href="html/T01_ChatBot_popup.html" target="iframeSubmaster">
+                                    <div>Popup</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a href="html/T02_ChatBot_layer.html" target="iframeSubmaster">
+                                    <div>Layer</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a href="html/T03_ChatBot_drawer.html" target="iframeSubmaster">
+                                    <div>Drawer</div>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                    <section data-accordion>
+                        <a class="depth1" data-control>
+                            <div>Component</div>
+                        </a>
+                        <div data-content class="finalDepth">
+                            <article>
+                                <a data-control href="html/C01_ChatBot_text.html" target="iframeSubmaster">
+                                    <div>Text</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C02_ChatBot_image.html" target="iframeSubmaster">
+                                    <div>Image</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C03_ChatBot_button.html" target="iframeSubmaster">
+                                    <div>Button</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C04_ChatBot_quickReply.html" target="iframeSubmaster">
+                                    <div>Quick Reply</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C05_ChatBot_card.html" target="iframeSubmaster">
+                                    <div>Card</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C06_ChatBot_carousel.html" target="iframeSubmaster">
+                                    <div>Carousel</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C07_ChatBot_list.html" target="iframeSubmaster">
+                                    <div>List</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C08_ChatBot_table.html" target="iframeSubmaster">
+                                    <div>Table</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C09_ChatBot_datepicker.html" target="iframeSubmaster">
+                                    <div>Datepicker</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C10_ChatBot_rating.html" target="iframeSubmaster">
+                                    <div>Rating</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C11_ChatBot_loading.html" target="iframeSubmaster">
+                                    <div>Loading</div>
+                                </a>
+                            </article>
+                            <article>
+                                <a data-control href="html/C12_ChatBot_popup.html" target="iframeSubmaster">
+                                    <div>Popup</div>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </nav>
+        <!-- //page-left end -->
+
+        <!-- page-content start -->
+        <section class="page-content container-fluid">
+            <iframe class="container" id="iframeContainer" name="iframeSubmaster" src="html/T02_ChatBot_layer.html" frameborder="0" style="width: 100%; height: 100%"></iframe>
+        </section>
+        <!-- //page-content end -->
+    </div>
+    <!-- //page-container end -->
+
+    <!-- javascript (library) -->
+    <script type="text/javascript" src="addon/jquery/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="addon/jquery/js/jquery.accordion.js"></script>
+
+    <!-- javascript -->
+    <script type="text/javascript" src="js/BX_js_common.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="addon/html5shiv-master/dist/html5shiv.min.js"></script>
+    <script type="text/javascript" src="addon/html5shiv-master/dist/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        $(window).ready(function() {
+            $('.page-navigation a').click(function() {
+                $('.page-navigation a').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
