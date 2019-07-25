@@ -34,7 +34,7 @@
                 <button class="btn_icon btn_help"><span>help</span></button>
                 <button class="btn_icon btn_customerService"><span>customer service</span></button>
                 <button class="btn_icon btn_chatbot"><span>chatbot</span></button>
-                <button class="btn_icon btn_close"><span>close</span></button>
+                <button class="btn_icon btn_close" id="closeChatBot"><span>close</span></button>
             </div>
         </header>
 
@@ -896,6 +896,12 @@
     <!-- custom javascript -->
     <script type="text/javascript">
         $(document).ready(function() {
+
+            // close chatbot
+            $('#closeChatBot').click(function() {
+                window.parent.closeChatbot();
+            });
+
             // popup (full screen)
             $('#btnPopupFull').click(function() {
                 $('#popup_full').css('display', 'block');
